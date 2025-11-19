@@ -7,6 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page
+  },
+  {
+    path: 'club-page',
+    loadChildren: () =>
+      import('./club-page/club-page.module').then(m => m.ClubPagePageModule)
   }
 ];
 

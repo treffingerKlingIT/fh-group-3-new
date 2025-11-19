@@ -15,35 +15,15 @@ const routes: Routes = [
   // -------------------------------------------------------------------------------------------------------------------
   // Example paths
   // -------------------------------------------------------------------------------------------------------------------
-  {
-    path: 'examples',
-    loadChildren: () => import('./pages/examples/tabs/tabs.module').then(m => m.TabsPageModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'example-names',
-    loadChildren: () => import('./pages/examples/names/names.module').then( m => m.NamesPageModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'example-photos',
-    loadChildren: () => import('./pages/examples/photos/photos.module').then( m => m.PhotosPageModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'example-offline-names',
-    loadChildren: () => import('./pages/examples/offline-names/offline-names.module').then( m => m.OfflineNamesPageModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'whisper-ai',
-    loadChildren: () => import('./pages/examples/whisper-ai/whisper-ai.module').then( m => m.WhisperAiPageModule),
-    canActivate: [AuthGuard]
-  },
+
   {
     path: '',
     pathMatch: 'full',
     redirectTo: 'tabs/tab1',
+  },
+  {
+    path: 'club-page',
+    loadChildren: () => import('./pages/tab1/club-page/club-page.module').then(m => m.ClubPagePageModule)
   }
 ];
 @NgModule({

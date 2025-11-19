@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page
+  },
+  {
+    path: 'dinner',
+    loadChildren: () => import('./dinner/dinner.module').then( m => m.DinnerPageModule)
   }
 ];
 
