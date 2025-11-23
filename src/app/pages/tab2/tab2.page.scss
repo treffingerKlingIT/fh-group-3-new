@@ -1,0 +1,94 @@
+ion-content{
+  --background: var(--ion-color-light);
+}
+
+.background ion-row ion-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  background: var(--ion-color-secondary);
+  display: flex;
+  height: 40vh;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+}
+
+.header-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hello {
+  font-size: 0.8em;
+}
+
+.day-date {
+  .day {
+    font-weight: normal;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .date{
+    font-weight: bold;
+    font-size: 6em;
+    color: var(--ion-color-primary);
+    margin:0px;
+    line-height: 0.8em;
+  }
+
+}
+
+.today-section{
+  padding-left: 10px;
+}
+
+/* --- NOTIFICATIONS SECTION --- */
+
+.notifications-section {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h5{
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+/* Full-width list items */
+ion-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  --border-radius: 12px;
+  --inner-border-width: 0px;
+  --border-width: 1px;
+}
+
+ion-list{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+ion-label{
+  --border-width: 0;
+}
+
+.notification-icons {
+  width: 32px;       /* icon size */
+  height: 32px;
+  margin-right: 12px; /* <-- this adds space between icon and text */
+}
+
+
+

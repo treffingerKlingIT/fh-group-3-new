@@ -28,3 +28,8 @@
 /* Add here custom scss files for your global design */
 @import "theme/header";
 @import "theme/content";
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ion-content, ion-header, ion-title, ion-card, ion-label, h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+}
+
