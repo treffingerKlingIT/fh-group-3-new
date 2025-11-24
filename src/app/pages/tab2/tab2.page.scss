@@ -25,6 +25,7 @@ ion-content{
 
 .hello {
   font-size: 0.8em;
+  font-family: "Inter", sans-serif;
 }
 
 .day-date {
@@ -32,20 +33,23 @@ ion-content{
     font-weight: normal;
     font-size: 1em;
     margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
   }
 
   .date{
     font-weight: bold;
     font-size: 6em;
     color: var(--ion-color-primary);
-    margin:0px;
+    margin:0;
     line-height: 0.8em;
+    font-family: "Poster Cut Neue";
   }
 
 }
 
 .today-section{
   padding-left: 10px;
+
 }
 
 /* --- NOTIFICATIONS SECTION --- */
@@ -58,9 +62,11 @@ ion-content{
 }
 
 h5{
-  margin: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Inter", sans-serif;
+
 }
 
 
@@ -73,15 +79,20 @@ ion-item {
   --border-radius: 12px;
   --inner-border-width: 0px;
   --border-width: 1px;
+
 }
 
 ion-list{
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 ion-label{
   --border-width: 0;
+
+  h2{
+    font-family: "Inter", sans-serif;
+  }
 }
 
 .notification-icons {
