@@ -28,14 +28,21 @@
 /* Add here custom scss files for your global design */
 @import "theme/header";
 @import "theme/content";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-ion-content, ion-header, ion-title, ion-card, ion-label, h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", sans-serif;
+
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  src: url('./assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf');
 }
 
-@import url("https://use.typekit.net/bfh4xyd.css");
-ion-content, ion-header, ion-title, ion-card, ion-label, h1, h2, h3, h4, h5, h6 {
-  font-family: "Poster Cut Neue", sans-serif;
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/fonts/BricolageGrotesque_24pt-Bold.ttf') format('ttf');
 }
+
+
 
 @import "@mobiscroll/angular/dist/css/mobiscroll.min.css";
