@@ -28,5 +28,7 @@
 /* Add here custom scss files for your global design */
 @import "theme/header";
 @import "theme/content";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://use.typekit.net/bfh4xyd.css");
 
 @import "@mobiscroll/angular/dist/css/mobiscroll.min.css";
