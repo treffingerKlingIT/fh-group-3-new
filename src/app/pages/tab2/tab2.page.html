@@ -1,9 +1,64 @@
-<ion-header>
-  <ion-toolbar color="light">
-    <ion-title>Tab2</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen class="dashboard-page">
 
-<ion-content>
+  <!-- header area -->
+  <section class="background">
+    <ion-grid class="header-grid">
+      <ion-row class="hello">
+        <ion-col size="12">
+          <div>HELLO SELINA</div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="day-date">
+        <ion-col size="12">
+          <div class="day">WEDNESDAY</div>
+          <div class="date">19.11.</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+
+  <ion-grid class="today-section">
+    <ion-row>
+      <ion-col size="12">
+        <h5> Today at a glance </h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid class="notifications-section">
+    <ion-row>
+      <ion-col size="12">
+        <h5> Notifications </h5>
+      </ion-col>
+
+      <ion-col size="12">
+      <ion-list class="notification-item">
+        <ion-item>
+          <img src="assets/icon/club-1.svg" alt="home-icon" class="notification-icons"/>
+          <ion-label>
+            <h2> Notification 1 </h2>
+            <p>This is a short notification preview text.</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <img src="assets/icon/club-2.svg" alt="home-icon" class="notification-icons"/>
+          <ion-label>
+            <h2> Notification 2 </h2>
+            <p>This is a short notification preview text.</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+
 
 </ion-content>
