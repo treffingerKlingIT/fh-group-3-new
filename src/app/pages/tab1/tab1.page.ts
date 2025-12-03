@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../interfaces/core/user';
 import {AuthService} from '../../services/core/auth.service';
+import {localeDe, MbscCalendarEvent, MbscEventcalendarOptions, setOptions} from "@mobiscroll/angular";
+import {HttpClient} from "@angular/common/http";
+
+setOptions({
+  locale: localeDe,
+  theme: 'ios',
+  themeVariant: 'light',
+});
 
 @Component({
   selector: 'app-tab1',
@@ -11,9 +19,30 @@ export class Tab1Page implements OnInit {
 
   protected user: User = null;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private http: HttpClient) { }
+
+  myEvents: MbscCalendarEvent[] = [];
+
+  eventSettings: MbscEventcalendarOptions = {
+    clickToCreate: false,
+    dragToCreate: false,
+    dragToMove: false,
+    dragToResize: false,
+    eventDelete: false,
+    view: {
+      calendar: { type: 'month' },
+      agenda: { type: 'month' },
+    },
+    onEventClick: (args) => {
+
+    },
+  };
 
   public ngOnInit(): void {
+    /* this.http.jsonp<MbscCalendarEvent[]>('https://trial.mobiscroll.com/events/?vers=5', 'callback').subscribe((resp) => {
+      this.myEvents = resp;
+    }); */
+
     this.user = this.authService.user;
   }
 

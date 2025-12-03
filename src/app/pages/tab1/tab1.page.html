@@ -1,3 +1,6 @@
+
+
+
 <ion-header>
   <ion-toolbar color="light">
     <ion-title>Event Calendar</ion-title>
@@ -6,4 +9,7 @@
 
 <ion-content>
  <ion-button routerLink="club-page"> Club</ion-button>
+
+  <mbsc-eventcalendar [data]="myEvents" [options]="eventSettings"></mbsc-eventcalendar>
+
 </ion-content>
