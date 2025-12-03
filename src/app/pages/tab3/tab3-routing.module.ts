@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'dinner',
     loadChildren: () => import('./dinner/dinner.module').then( m => m.DinnerPageModule)
+  },
+  {
+    path: 'run',
+    loadChildren: () => import('./run/run.module').then( m => m.RunPageModule)
   }
 ];
 

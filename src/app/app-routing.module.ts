@@ -24,7 +24,8 @@ const routes: Routes = [
   {
     path: 'club-page',
     loadChildren: () => import('./pages/tab1/club-page/club-page.module').then(m => m.ClubPagePageModule)
-  }
+  },
+
 ];
 @NgModule({
   imports: [
