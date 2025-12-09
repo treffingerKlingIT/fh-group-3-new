@@ -21,10 +21,7 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'tabs/tab1',
   },
-  {
-    path: 'club-page',
-    loadChildren: () => import('./pages/tab1/club-page/club-page.module').then(m => m.ClubPagePageModule)
-  },
+
 
 ];
 @NgModule({
