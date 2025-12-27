@@ -1,0 +1,32 @@
+
+<section class="notification-modal">
+ 
+
+  <ion-grid *ngIf="notification" class="content-grid">
+
+    <ion-row>
+      <ion-col size="12">
+        <img [src]="notification.icon" class="modal-icon" />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <h1 class="task-title">{{ notification.title }}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <p class="task-body">{{ notification.text }}</p>
+
+        <p class="task-details">
+          {{ notification.fullDetails }}
+        </p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+</section>

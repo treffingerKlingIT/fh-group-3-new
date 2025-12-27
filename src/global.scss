@@ -36,12 +36,34 @@
 }
 
 @font-face {
-  font-family: 'Bricolage Grotesque';
+  font-family: 'Pally-Regular';
+  src: url('./assets/fonts/Pally-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
   font-style: normal;
-  font-weight: 800;
-  src: url('./assets/fonts/BricolageGrotesque_24pt-Bold.ttf') format('ttf');
 }
 
+@font-face {
+  font-family: 'Pally-Medium';
+  src: url('./assets/fonts/Pally-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Pally-Bold';
+  src: url('./assets/fonts/Pally-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 
 @import "@mobiscroll/angular/dist/css/mobiscroll.min.css";
+
+.notification-sheet-modal {
+  --padding-bottom: 5px;
+  --border-radius: 16px;
+  --background: transparent;
+  box-shadow: none !important;
+}

@@ -1,0 +1,22 @@
+.notification-modal {
+  /* 1. Create the floating effect */
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px; /* The 5px gap you wanted */
+
+  /* 2. Style the card appearance */
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Add your own shadow */
+
+  /* 3. layout management */
+  height: calc(100% - 10px); /* Subtract the margin so it fits */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Clips the content to the rounded corners */
+}
+
+.content-grid {
+  flex: 1;
+  overflow-y: auto;
+}

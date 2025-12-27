@@ -1,26 +1,22 @@
+import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
+import { Tab2Page } from './tab2.page';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 
-import { Tab2Page } from './tab2.page';
+// 1. IMPORT HINZUFÜGEN
+import { NotificationModalComponent } from './notification-modal/notification-modal.component';
 
 @NgModule({
   imports: [
+    IonicModule,
     CommonModule,
     FormsModule,
-    IonicModule,
     Tab2PageRoutingModule
-
   ],
-  declarations: [Tab2Page]
-
+  // 2. HIER EINTRAGEN
+  declarations: [Tab2Page, NotificationModalComponent]
 })
-export class Tab2PageModule {
-
-}
-
-
+export class Tab2PageModule {}

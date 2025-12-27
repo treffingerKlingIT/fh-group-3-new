@@ -35,26 +35,27 @@
       </ion-col>
 
       <ion-col size="12">
-      <ion-list class="notification-item">
-        <ion-item>
-          <img src="assets/icon/club-1.svg" alt="home-icon" class="notification-icons"/>
-          <ion-label>
-            <h2> Notification 1 </h2>
-            <p>This is a short notification preview text.</p>
-          </ion-label>
-        </ion-item>
+        <ion-list class="notification-item">
 
-        <ion-item>
-          <img src="assets/icon/club-2.svg" alt="home-icon" class="notification-icons"/>
-          <ion-label>
-            <h2> Notification 2 </h2>
-            <p>This is a short notification preview text.</p>
-          </ion-label>
-        </ion-item>
-      </ion-list>
+          <ion-item
+            button
+            detail="false"
+            lines="none"
+            *ngFor="let item of notifications"
+            (click)="openModal(item)">
+
+            <img [src]="item.icon" alt="icon" class="notification-icons"/>
+            <ion-label>
+              <!--<ion-chip color="primary"> {{item.tag}} </ion-chip>-->
+              <h2> {{ item.title }} </h2>
+              <p> {{ item.text }} </p>
+
+            </ion-label>
+          </ion-item>
+
+        </ion-list>
       </ion-col>
     </ion-row>
-
   </ion-grid>
 
 
