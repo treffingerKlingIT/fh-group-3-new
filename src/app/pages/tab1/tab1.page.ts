@@ -21,10 +21,18 @@ export class Tab1Page implements OnInit {
 
   constructor(private authService: AuthService, private http: HttpClient) { }
 
-  myEvents: MbscCalendarEvent[] = [];
+  myEvents: MbscCalendarEvent[] = [
+    {
+      start: new Date(2026, 0, 30, 18, 30),
+      end: new Date(2026, 0, 30, 20, 0),
+      title: 'Run Club',
+      allDay: false,
+      color: 'red'
+    }
+  ];
 
   eventSettings: MbscEventcalendarOptions = {
-    clickToCreate: false,
+    clickToCreate: 'double',
     dragToCreate: false,
     dragToMove: false,
     dragToResize: false,
