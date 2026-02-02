@@ -3,12 +3,56 @@ ion-title{
 }
 
 ion-content {
+  --background: #191919;
   display: flex;
 }
 
-
 ion-button {
-  display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
+  font-family: "Bricolage Grotesque";
+  text-transform: none;
+  --border-radius: 50px;
+  --box-shadow: none;
+  height: 80px;
+  margin: 10px 16px;
+
+  &::part(native) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 25px;
+}
+
+  &.dinner-button {
+    --background: #ffc900; /* Your custom color */
+    --color: #000;         /* Text color */
+    height: 80px;          /* Buttons with <h1> usually need more height */
+    margin: 10px;
+  }
+
+&.run-button {
+  --background: #ff1778; /* Your custom color */
+  --color: #000;         /* Text color */
+  height: 80px;          /* Buttons with <h1> usually need more height */
+  margin: 10px;
+}
+
+
+
+
+  .button-text {
+    flex: 1;          /* This grows to take up all available space */
+    text-align: left; /* Ensures text stays on the left */
+    font-size: 30px;  /* Adjusting size based on your previous CSS */
+    font-weight: bolder;
+    margin: 0;
+  }
+
+  .button-number {
+    text-align: right;
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 0;
+    margin-left: 15px; /* Small gap between text and number */
+  }
 }

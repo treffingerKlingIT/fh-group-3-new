@@ -110,6 +110,19 @@ img{
   padding-right: 3px;
 }
 
+ion-toast {
+  /* Change the background and text color */
+  --background: #f4f4f4;
+  --color: #333;
+
+  /* Add a border or shadow */
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+
+  /* If position="top", use this to push it down from the status bar */
+  margin-top: 20px;
+}
+
 
 
 

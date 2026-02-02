@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; // Added OnInit
 import { ModalController } from '@ionic/angular';
-// Importiere deine LOKALE Komponente (der Pfad ist jetzt kurz, da gleicher Ordner)
 import { NotificationModalComponent } from './notification-modal/notification-modal.component';
 
 @Component({
@@ -8,9 +7,11 @@ import { NotificationModalComponent } from './notification-modal/notification-mo
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit { // Added implements OnInit
 
-  // Deine Daten für die Liste
+  // Control variable for the toast
+  isToastOpen = false;
+
   notifications = [
     {
       title: 'New Event Invitation',
@@ -29,19 +30,27 @@ export class Tab2Page {
 
   constructor(private modalCtrl: ModalController) {}
 
-  // Die Funktion, die beim Klick ausgeführt wird
+  // This runs automatically when the page loads
+  ngOnInit() {
+    this.setOpen(true);
+  }
+
+  // Helper function to change the toast state
+  setOpen(isOpen: boolean) {
+    this.isToastOpen = isOpen;
+  }
+
   async openModal(item: any) {
     const modal = await this.modalCtrl.create({
       component: NotificationModalComponent,
       initialBreakpoint: 0.5,
       breakpoints: [0, 0.5],
-      cssClass: 'notification-sheet-modal', // <--- Add this line
+      cssClass: 'notification-sheet-modal',
       handle: false,
       componentProps: {
-        notification: item // Wir übergeben das angeklickte Item
+        notification: item
       }
     });
     return await modal.present();
   }
-
 }
