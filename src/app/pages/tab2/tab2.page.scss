@@ -1,5 +1,5 @@
 ion-content{
-  --background: #fffff;
+  --background: #FDFDFD;
 }
 
 .background ion-row ion-col {
@@ -8,13 +8,27 @@ ion-content{
 }
 
 .background {
-  background: var(--ion-color-secondary);
+  //background: var(--ion-color-secondary);
+  background-image: url("../../../assets/bg3.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   height: 40vh;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  //border-bottom-left-radius: 20px;
+  //border-bottom-right-radius: 20px;
   padding: 10px;
 }
+
+
+h5{
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom:10px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: bold;
+}
+
 
 .header-grid {
   flex: 1;
@@ -26,6 +40,7 @@ ion-content{
 .hello {
   font-size: 0.8em;
   font-family: "Inria Sans", sans-serif;
+  color: #fdfdfd;
 }
 
 .day-date {
@@ -34,11 +49,12 @@ ion-content{
     font-size: 1em;
     margin-bottom: 10px;
     font-family: "Inria Sans", sans-serif;
+    color: #fdfdfd;
   }
 
   .date{
     font-size: 6em;
-    color: var(--ion-color-primary);
+    color: #fdfdfd;
     margin:0;
     line-height: 0.8em;
     font-family: "Bricolage Grotesque", sans-serif;
@@ -51,12 +67,6 @@ ion-content{
   padding-left: 10px;
   /* This targets the "Mo. 2. Feb. 2026" row specifically */
 
-  h5{
-    font-family: "Bricolage Grotesque", sans-serif;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    font-weight: bold;
-  }
 }
 
 :host {
@@ -100,35 +110,59 @@ ion-content{
   flex-direction: column;
 }
 
-h5{
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-weight: bold;
-}
 
 .notification-item {
   background: transparent;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+}
+
+ion-col{
+  padding: 0px;
 }
 
 ion-item {
+  padding: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   --border-radius: 12px;
-  --inner-border-width: 0px;
   --border-width: 1px;
 }
+
+ion-item.run{
+  --background: #DAECF6;
+  --border-width: 1px;
+  --border-color: #47A2D3;
+}
+
+ion-item.dinner{
+  --background: #E0EDDE;
+  --border-width: 1px;
+  --border-color: #65A55B;
+}
+
+
 
 ion-label{
   --border-width: 0;
 
   h2{
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-weight: 500;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: bold;
+
     padding-bottom: 4px;
+  }
+
+  .date{
+    color: black;
+  }
+
+  .text{
+    padding-top: 5px;
+    font-style: italic;
   }
 
 }

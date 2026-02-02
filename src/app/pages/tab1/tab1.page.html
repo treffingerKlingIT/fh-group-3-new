@@ -1,11 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Event Calendar</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen class="calendar-page">
 
-<ion-content>
+  <ion-grid class="header">
+    <h1> Event <br> Calendar</h1>
+  </ion-grid>
 
-  <mbsc-eventcalendar [data]="myEvents" [options]="eventSettings"></mbsc-eventcalendar>
+
+<ion-grid class="mbsc-calendar">
+
+  <mbsc-eventcalendar [data]="myEvents" [options]="eventSettings" > </mbsc-eventcalendar>
+
+</ion-grid>
 
 </ion-content>

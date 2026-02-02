@@ -10,59 +10,64 @@ import { MbscCalendarEvent, MbscEventcalendarOptions } from '@mobiscroll/angular
 })
 export class Tab2Page implements OnInit {
 
-  // Control variable for the toast
+
   isToastOpen = false;
 
-  // 1. Mobiscroll Events Data
   myEvents: MbscCalendarEvent[] = [
     {
       start: new Date(2026, 1, 2, 18, 30),
       end: new Date(2026, 1, 2, 20, 0),
       title: 'WSWED Run #12',
       location: 'Start: Kunsthaus',
-      color: '#ff0000'
+      color: '#47A2D3'
     }
   ];
 
-  // 2. Mobiscroll Configuration for "Today at a glance"
+
   dailyOptions: MbscEventcalendarOptions = {
     view: {
       agenda: {
         type: 'day',
-          scrollable: false
+        scrollable: false
       }
     },
-    // This removes the calendar header (month/arrows) to keep the dashboard clean
     showControls: false,
   };
 
+
   notifications = [
     {
-      title: 'New Dinner Invitation',
+      title: 'Pasta Night',
       text: 'Vicky invited you to a Dinner Evening',
       tag: "Dinner Club",
-      fullDetails: 'Hier ist der lange Text für Nummer 1...',
-      icon: 'assets/icon/club-1.svg'
+      type: 'dinner',
+      location: 'Vickys place',
+      date: new Date(2026, 1, 6, 20, 0),
+      fullDetails: "I want to invite you to our monthly Dinner Party. The theme is Pasta Night. I prepare Pasta and drinks, but I ask you to bring one pasta sauce."
     },
     {
       title: 'WSWED Run #13',
       text: 'Next run is already scheduled.',
       tag: "WSWED RUN CLUB",
-      fullDetails: 'Hier ist der lange Text für Nummer 2...',
-      icon: 'assets/icon/run-club.svg'
+      type: 'run',
+      location: 'Start: Kunsthaus',
+      date: new Date(2026, 1, 2, 18, 30),
+      fullDetails: 'Get ready for our #13 run this year. Lets hit the 10k. VAMOS.'
     }
   ];
 
   constructor(private modalCtrl: ModalController) {}
 
   ngOnInit() {
-    this.setOpen(true);
+    // Optional: Toast beim Laden der Seite anzeigen
+    // this.setOpen(true);
   }
 
   setOpen(isOpen: boolean) {
     this.isToastOpen = isOpen;
   }
 
+  // Diese Funktion öffnet das Modal und löscht die Nachricht bei Erfolg
   async openModal(item: any) {
     const modal = await this.modalCtrl.create({
       component: NotificationModalComponent,
@@ -74,6 +79,20 @@ export class Tab2Page implements OnInit {
         notification: item
       }
     });
-    return await modal.present();
+
+    await modal.present();
+
+    // Hier warten wir auf die Rückgabe aus dem Modal
+    const { data } = await modal.onDidDismiss();
+
+    // Wenn im Modal 'accepted: true' gesendet wurde
+    if (data && data.accepted) {
+      // Entferne das spezifische Item aus der notifications-Liste
+      this.notifications = this.notifications.filter(n => n !== item);
+
+      console.log('Notification entfernt:', item.title);
+
+
+    }
   }
 }

@@ -48,13 +48,18 @@
             detail="false"
             lines="none"
             *ngFor="let item of notifications"
+            [class]="item.type"
             (click)="openModal(item)">
 
-            <img [src]="item.icon" alt="icon" class="notification-icons"/>
+           <!-- <img [src]="item.icon" alt="icon" class="notification-icons"/>-->
             <ion-label>
               <!--<ion-chip color="primary"> {{item.tag}} </ion-chip>-->
               <h2> {{ item.title }} </h2>
-              <p> {{ item.text }} </p>
+
+              <p class="date">{{ item.date | date:'dd.MM.yyyy HH:mm' }}</p>
+              <p class="text"> {{ item.text }} </p>
+
+
 
             </ion-label>
           </ion-item>
@@ -67,7 +72,7 @@
 
   <ion-toast
     [isOpen]="isToastOpen"
-    message="This toast will close in 5 seconds"
+    message="2 new Notifications"
     [duration]="5000"
     position="top"
     (didDismiss)="setOpen(false)">

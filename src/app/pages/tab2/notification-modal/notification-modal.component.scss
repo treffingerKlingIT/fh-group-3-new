@@ -1,22 +1,96 @@
 .notification-modal {
-  /* 1. Create the floating effect */
+  //floating
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 5px; /* The 5px gap you wanted */
 
-  /* 2. Style the card appearance */
+  //card
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Add your own shadow */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 
-  /* 3. layout management */
-  height: calc(100% - 10px); /* Subtract the margin so it fits */
+  //layout
+  height: calc(100% - 10px);
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Clips the content to the rounded corners */
+  overflow: hidden;
 }
+
 
 .content-grid {
   flex: 1;
   overflow-y: auto;
 }
+
+.notification-title {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.notification-title.dinner {
+  color: #2e7d32; /* Pasta Night Grün */
+}
+
+.notification-title.run {
+  color: #47A2D3; /* Run Club Blau */
+}
+
+.date{
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+
+.notification-text{
+  font-style: italic;
+}
+
+
+//buttons
+.button-row {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+ion-button {
+  --box-shadow: none !important;
+  --box-shadow-activated: none !important;
+  font-family: "Inria Sans", sans-serif;
+  font-weight: bold;
+}
+
+/* Accept Button: Solid Hintergrund */
+ion-button.accept.run {
+  --background: #47A2D3;
+  --color: white;
+    box-shadow: none;
+}
+
+/* Decline Button: Nur Outline */
+ion-button.decline.run {
+  --border-color: #47A2D3;
+  --color: #47A2D3; /* Textfarbe passend zum Rahmen */
+  --border-width: 1px;
+  --border-radius: 10px;
+}
+
+/* --- DINNER THEME (Grün) --- */
+
+ion-button.accept.dinner {
+  --background: #2e7d32;
+  --color: white;
+  box-shadow: none;
+}
+
+ion-button.decline.dinner {
+  --border-color: #2e7d32;
+  --color: #2e7d32;
+  --border-width: 1px;
+}
+
