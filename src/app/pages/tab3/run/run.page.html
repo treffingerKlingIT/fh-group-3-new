@@ -1,7 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-row><ion-back-button defaultHref="/tab3"></ion-back-button>
-      <ion-title>back to clubs</ion-title></ion-row>
+    <ion-row>
+      <ion-back-button defaultHref="/tab3"></ion-back-button>
+      <ion-title></ion-title>
+    </ion-row>
 
   </ion-toolbar>
 </ion-header>
@@ -9,37 +11,54 @@
 <ion-content [fullscreen]="true">
   <ion-grid class="main-container">
     <h1>WSWED (Wann sind wir endlich da?) Run Club</h1>
-    <h3>every last friday of the month</h3>
+    <div class="info-tag">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <h3>every last friday of the month</h3>
+    </div>
     <h2>Members</h2>
 
     <ion-row>
       <div class="member-item">
       <ion-avatar>
-        <img alt="Silhouette of a person's head" src="assets/avatar/cover.png" />
+        <img alt="Silhouette of a person's head" src="assets/avatar/bremer.jpg" />
       </ion-avatar>
         <h4 class="member-name">Vicky</h4>
         </div>
 
       <div class="member-item">
       <ion-avatar>
-        <img alt="Silhouette of a person's head" src="assets/avatar/cover.png" />
+        <img alt="Silhouette of a person's head" src="assets/avatar/seli.JPG" />
       </ion-avatar>
         <h4 class="member-name">Seli</h4>
       </div>
 
       <div class="member-item">
       <ion-avatar>
-        <img alt="Silhouette of a person's head" src="assets/avatar/cover.png" />
+        <img alt="Silhouette of a person's head" src="assets/avatar/flo.JPG" />
       </ion-avatar>
         <h4 class="member-name">Flo</h4>
       </div>
 
+      <div class="member-item">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="assets/avatar/flomi.JPG" />
+        </ion-avatar>
+        <h4 class="member-name">FloMi</h4>
+      </div>
+
+      <div class="member-item">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="assets/avatar/tobi.JPG" />
+        </ion-avatar>
+        <h4 class="member-name">Tobi</h4>
+      </div>
+
     </ion-row>
     <h2>Description</h2>
-    <p>We aren't out here hunting Olympic medals. We’re a group of friends who realized that moving your legs is a lot easier when you’re laughing. Our philosophy is simple: No one gets left behind. Every route is meticulously planned to be accessible, scenic, and—most importantly—easy for everyone to crush. Whether we’re doing a casual 5k or a costume-clad themed run, the goal is always vibes over velocity.</p>
+    <p>We aren't out here hunting Olympic medals. We’re a group of friends who realized that moving your legs is a lot easier when you’re laughing. Our philosophy is simple: No one gets left behind. Every route is meticulously planned to be accessible, scenic, and—most importantly—easy for everyone to crush. </p>
 
   </ion-grid>
-  <ion-button id="open-modal" class="new-event-button">new event</ion-button>
+  <ion-button id="open-modal" class="new-event-button">NEW EVENT</ion-button>
   <ion-modal trigger="open-modal" class="center-modal">
     <ng-template>
       <ion-header>
@@ -75,7 +94,7 @@
 
           <div class="button-wrapper">
           <ion-button expand="block" class="publish-btn" (click)="closeModal()">
-            Publish
+            PUBLISH
           </ion-button>
         </div>
         </div>

@@ -3,7 +3,7 @@ ion-title{
 }
 
 ion-content {
-  --background: #191919;
+  --background: #fdfdfd;
   display: flex;
 }
 
@@ -24,18 +24,40 @@ ion-button {
 }
 
   &.dinner-button {
-    --background: #ffc900; /* Your custom color */
+    --background: #65A55B; /* Your custom color */
     --color: #000;         /* Text color */
     height: 80px;          /* Buttons with <h1> usually need more height */
     margin: 10px;
   }
 
 &.run-button {
-  --background: #ff1778; /* Your custom color */
+  --background: #47A2D3; /* Your custom color */
   --color: #000;         /* Text color */
   height: 80px;          /* Buttons with <h1> usually need more height */
   margin: 10px;
 }
+
+  &.craft-button {
+    --background: #EFAC4D; /* Your custom color */
+    --color: #000;         /* Text color */
+    height: 80px;          /* Buttons with <h1> usually need more height */
+    margin: 10px;
+  }
+
+  &.karaoke-button {
+    --background: #DE5A2E; /* Your custom color */
+    --color: #000;         /* Text color */
+    height: 80px;          /* Buttons with <h1> usually need more height */
+    margin: 10px;
+  }
+
+  &.presentation-button {
+    --background: #978EDD; /* Your custom color */
+    --color: #000;         /* Text color */
+    height: 80px;          /* Buttons with <h1> usually need more height */
+    margin: 10px;
+  }
+
 
 
 

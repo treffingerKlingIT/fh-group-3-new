@@ -1,7 +1,10 @@
 ion-toolbar {
-  --background: #ede6e6;
-  font-family: "Bricolage Grotesque";
-  font-size: 46px;
+  --background: #fdfdfd;
+
+}
+
+ion-back-button {
+  color: #47A2D3;
 }
 
 .main-container{
@@ -12,7 +15,7 @@ ion-toolbar {
     font-family: "Bricolage Grotesque";
     font-weight: bold;
     font-size: 50px;
-    color: #ff1778;
+    color: #47A2D3;
   }
 
   h2 {
@@ -22,6 +25,19 @@ ion-toolbar {
     margin-top: 25px;
   }
 
+  .info-tag {
+    display: flex;         /* Puts icon and h3 on the same line */
+    align-items: center;   /* Centers them vertically */
+    gap: 8px;              /* Space between the icon and text */
+    margin-top: 10px;
+    color: #666;           /* Optional: a slightly softer color for the sub-info */
+
+    ion-icon {
+      font-size: 22px;     /* Adjust icon size */
+      margin-top: 8px;
+      color: #47A2D3;      /* Give the icon your Run Club brand color */
+    }}
+
   h3{
     font-family: "Inria Sans";
     font-style: italic;
@@ -30,17 +46,23 @@ ion-toolbar {
 
   p{
     font-family: "Inria Sans";
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.5;
   }
 }
 
 ion-content{
-  --background: #f3eef1;
+  --background: #fdfdfd;
 }
 
 ion-button{
-  --background: #ff1778;
+  --background: #47A2D3;
   --border-radius: 50px;
+  font-family: "Inria Sans";
+  text-transform: none;
+  font-weight: 600;
+  font-size: 18px;
+
 
   &.new-event-button {
     position: fixed;
@@ -58,30 +80,24 @@ ion-button{
 
 
 
-
-
+/* POP-UP */
 .center-modal {
-  --height: 350px; /* Increased from 400px to accommodate bigger boxes */
+  font-family: "Inria Sans";
+  --height: 350px;
   --width: 90%;
   --border-radius: 20px;
   align-items: center;
-
-  /* This centers it on the screen */
-  align-items: center;
-  --max-width: 400px; /* Ensures it doesn't get too wide on tablets */
+  --max-width: 400px;
 }
 
-/* Make sure the backdrop is dark so the popup pops */
 ion-modal::part(backdrop) {
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
 
-
-
   ion-datetime-button {
     margin-top: 10px;
-    transform: scale(1.2); /* Makes the date button visually larger */
+    transform: scale(1.2);
     transform-origin: left;
     height:60px;
   }
@@ -89,13 +105,14 @@ ion-modal::part(backdrop) {
 
 .button-wrapper {
   display: flex;
-  justify-content: flex-end; /* Pushes button to the right */
+  justify-content: flex-end;
   width: 100%;
   margin-top: 20px;
 }
 
 .publish-btn {
-  --background: #ff1778;
+  font-family: "Inria Sans";
+  --background: #47A2D3;
   --color: white;
   --border-radius: 50px;
   --padding-start: 25px;
@@ -104,9 +121,10 @@ ion-modal::part(backdrop) {
   margin: 0;
   text-transform: none;
   font-weight: 600;
+  font-size: 18px;
 }
 
-/* Add some spacing to the items */
+
 ion-item {
   --background: #f4f4f4;
   --border-radius: 10px;
@@ -121,7 +139,7 @@ ion-item {
 
 /* AVATAR KRAM */
 ion-avatar {
-  padding: 5px;
+  padding: 3px;
 }
 
 .member-item {
@@ -140,5 +158,7 @@ ion-avatar {
   color: #333;
   text-align: center;     /* Centers text within its own box */
 }
+
+
 
 

@@ -2,11 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 
 @Component({
-  selector: 'app-dinner',
-  templateUrl: './dinner.page.html',
-  styleUrls: ['./dinner.page.scss'],
+  selector: 'app-presentations',
+  templateUrl: './presentations.page.html',
+  styleUrls: ['./presentations.page.scss'],
 })
-export class DinnerPage implements OnInit {
+export class PresentationsPage implements OnInit {
   // This "grabs" the modal from your HTML so we can control it
   @ViewChild(IonModal) modal!: IonModal;
 
@@ -19,4 +19,3 @@ export class DinnerPage implements OnInit {
     this.modal.dismiss();
   }
 }
-

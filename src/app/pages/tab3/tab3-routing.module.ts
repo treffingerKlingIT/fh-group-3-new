@@ -15,6 +15,18 @@ const routes: Routes = [
   {
     path: 'run',
     loadChildren: () => import('./run/run.module').then( m => m.RunPageModule)
+  },
+  {
+    path: 'karaoke',
+    loadChildren: () => import('./karaoke/karaoke.module').then( m => m.KaraokePageModule)
+  },
+  {
+    path: 'presentations',
+    loadChildren: () => import('./presentations/presentations.module').then( m => m.PresentationsPageModule)
+  },
+  {
+    path: 'crafts',
+    loadChildren: () => import('./crafts/crafts.module').then( m => m.CraftsPageModule)
   }
 ];
 
