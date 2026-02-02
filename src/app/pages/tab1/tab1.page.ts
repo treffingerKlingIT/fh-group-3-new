@@ -3,6 +3,7 @@ import {User} from '../../interfaces/core/user';
 import {AuthService} from '../../services/core/auth.service';
 import {localeDe, MbscCalendarEvent, MbscEventcalendarOptions, setOptions} from "@mobiscroll/angular";
 import {HttpClient} from "@angular/common/http";
+import {bluetooth} from "ionicons/icons";
 
 setOptions({
   locale: localeDe,
@@ -10,6 +11,7 @@ setOptions({
   themeVariant: 'light',
 });
 
+// @ts-ignore
 @Component({
   selector: 'app-tab1',
   templateUrl: './tab1.page.html',
@@ -25,9 +27,19 @@ export class Tab1Page implements OnInit {
     {
       start: new Date(2026, 1, 2, 18, 30),
       end: new Date(2026, 1, 2, 20, 0),
-      title: 'WSWED Run',
+      title: 'WSWED Run #13',
+      location: 'Start: Kunsthaus',
       allDay: false,
-      color: 'red'
+      color: '#47A2D3'
+    },
+
+    {
+      start: new Date(2026, 1, 17, 19, 0),
+      end: new Date(2026, 1, 17, 23, 0),
+      title: 'Knit Night',
+      location: 'Selis Place',
+      allDay: false,
+      color: '#EFAC4D'
     }
   ];
 

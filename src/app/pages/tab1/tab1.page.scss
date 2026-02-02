@@ -1,7 +1,30 @@
-h1 {
-  font-family: "Bricolage Grotesque", sans-serif;
+//whole page
+.calendar-page{
+  background: #fdfdfd;
 }
 
-toolbar, ion-content{
-  --ion-background-color: #f7f7f7;
+ion-content{
+  --background: #fdfdfd;
 }
+
+
+//header
+.header{
+  padding-left: 20px;
+  background: #fdfdfd;
+}
+
+h1{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+
+//calendar
+.mbsc-calendar{
+  background: #fdfdfd;
+
+}
+
+

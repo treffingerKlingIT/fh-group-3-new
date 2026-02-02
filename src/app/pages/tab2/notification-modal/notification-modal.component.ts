@@ -13,6 +13,15 @@ export class NotificationModalComponent {
 
   constructor(private modalCtrl: ModalController) { }
 
+  dismiss() {
+    this.modalCtrl.dismiss();
+  }
+
+  accept() {
+    console.log('Accepted:', this.notification.title);
+    this.modalCtrl.dismiss({ accepted: true });
+  }
+
   close() {
     this.modalCtrl.dismiss();
   }
