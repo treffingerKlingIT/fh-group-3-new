@@ -1,41 +1,64 @@
-import { Component, OnInit } from '@angular/core'; // Added OnInit
+import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NotificationModalComponent } from './notification-modal/notification-modal.component';
+import { MbscCalendarEvent, MbscEventcalendarOptions } from '@mobiscroll/angular';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page implements OnInit { // Added implements OnInit
+export class Tab2Page implements OnInit {
 
   // Control variable for the toast
   isToastOpen = false;
 
+  // 1. Mobiscroll Events Data
+  myEvents: MbscCalendarEvent[] = [
+    {
+      start: new Date(2026, 1, 2, 18, 30),
+      end: new Date(2026, 1, 2, 20, 0),
+      title: 'WSWED Run #12',
+      location: 'Start: Kunsthaus',
+      color: '#ff0000'
+    }
+  ];
+
+  // 2. Mobiscroll Configuration for "Today at a glance"
+  dailyOptions: MbscEventcalendarOptions = {
+    view: {
+      agenda: {
+        type: 'day',
+          scrollable: false
+      }
+    },
+    // This removes the calendar header (month/arrows) to keep the dashboard clean
+    showControls: false,
+  };
+
   notifications = [
     {
-      title: 'New Event Invitation',
-      text: 'You got invited to a new Dinner Evening',
+      title: 'New Dinner Invitation',
+      text: 'Vicky invited you to a Dinner Evening',
+      tag: "Dinner Club",
       fullDetails: 'Hier ist der lange Text für Nummer 1...',
       icon: 'assets/icon/club-1.svg'
     },
     {
-      title: 'WSWED Run #12 is cancelled',
-      text: 'Due to bad weather the run is cancelled.',
+      title: 'WSWED Run #13',
+      text: 'Next run is already scheduled.',
       tag: "WSWED RUN CLUB",
       fullDetails: 'Hier ist der lange Text für Nummer 2...',
-      icon: 'assets/icon/club-2.svg'
+      icon: 'assets/icon/run-club.svg'
     }
   ];
 
   constructor(private modalCtrl: ModalController) {}
 
-  // This runs automatically when the page loads
   ngOnInit() {
     this.setOpen(true);
   }
 
-  // Helper function to change the toast state
   setOpen(isOpen: boolean) {
     this.isToastOpen = isOpen;
   }

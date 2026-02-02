@@ -1,5 +1,5 @@
 ion-content{
-  --background: var(--ion-color-light);
+  --background: #fffff;
 }
 
 .background ion-row ion-col {
@@ -25,7 +25,7 @@ ion-content{
 
 .hello {
   font-size: 0.8em;
-  font-family: "Inter", sans-serif;
+  font-family: "Inria Sans", sans-serif;
 }
 
 .day-date {
@@ -33,7 +33,7 @@ ion-content{
     font-weight: normal;
     font-size: 1em;
     margin-bottom: 10px;
-    font-family: "Inter", sans-serif;
+    font-family: "Inria Sans", sans-serif;
   }
 
   .date{
@@ -41,7 +41,7 @@ ion-content{
     color: var(--ion-color-primary);
     margin:0;
     line-height: 0.8em;
-    font-family: "Pally-Bold", sans-serif;
+    font-family: "Bricolage Grotesque", sans-serif;
     font-weight: bold;
   }
 
@@ -49,8 +49,47 @@ ion-content{
 
 .today-section{
   padding-left: 10px;
+  /* This targets the "Mo. 2. Feb. 2026" row specifically */
 
+  h5{
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
 }
+
+:host {
+  ::ng-deep {
+    /* Target die exakte Klasse aus deinem Screenshot */
+    .mbsc-ios.mbsc-list-header,
+    .mbsc-agenda-day {
+      display: none !important;
+      height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: none !important;
+    }
+
+
+    .mbsc-agenda-item {
+      border-bottom: none !important;
+      border-top: none !important;
+    }
+
+    .mbsc-agenda-list {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    mbsc-eventcalendar {
+      --mbsc-background: transparent;
+      border: none !important;
+    }
+  }
+}
+
+
 
 /* --- NOTIFICATIONS SECTION --- */
 
@@ -65,11 +104,14 @@ h5{
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: bold;
 }
 
+.notification-item {
+  background: transparent;
+}
 
-/* Full-width list items */
 ion-item {
   width: 100%;
   display: flex;
@@ -84,30 +126,18 @@ ion-label{
   --border-width: 0;
 
   h2{
-    font-family: "Inter", sans-serif;
+    font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 500;
     padding-bottom: 4px;
   }
 
-
-  ion-chip{
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 12px;
-    padding-right: 12px;
-    font-family: Inter, sans-serif;
-    font-weight: bold;
-    font-size: 8px;
-    --background: var(--ion-color-primary);
-    letter-spacing: 2px;
-    margin: 0;
-  }
 }
 
 img{
   width: 40px;
   height: 40px;
-  padding-right: 3px;
+  padding-right: 10px;
+
 }
 
 ion-toast {

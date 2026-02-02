@@ -11,8 +11,8 @@
 
       <ion-row class="day-date">
         <ion-col size="12">
-          <div class="day">WEDNESDAY</div>
-          <div class="date">19.11.</div>
+          <div class="day">MONDAY</div>
+          <div class="date">02.02.</div>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -23,7 +23,12 @@
     <ion-row>
       <ion-col size="12">
         <h5> Today at a glance </h5>
-        <p> 10:00 WSWED Run, Start: Kunsthaus</p>
+       <!-- <p> 10:00 WSWED Run, Start: Kunsthaus</p>-->
+        <mbsc-eventcalendar
+          [data]="myEvents"
+          [options]="dailyOptions" >
+
+        </mbsc-eventcalendar>
       </ion-col>
     </ion-row>
   </ion-grid>

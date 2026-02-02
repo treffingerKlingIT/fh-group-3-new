@@ -23,9 +23,9 @@ export class Tab1Page implements OnInit {
 
   myEvents: MbscCalendarEvent[] = [
     {
-      start: new Date(2026, 0, 30, 18, 30),
-      end: new Date(2026, 0, 30, 20, 0),
-      title: 'Run Club',
+      start: new Date(2026, 1, 2, 18, 30),
+      end: new Date(2026, 1, 2, 20, 0),
+      title: 'WSWED Run',
       allDay: false,
       color: 'red'
     }
@@ -39,7 +39,7 @@ export class Tab1Page implements OnInit {
     eventDelete: false,
     view: {
       calendar: { type: 'month' },
-      agenda: { type: 'month' },
+      agenda: { type: 'week' },
     },
     onEventClick: (args) => {
 
