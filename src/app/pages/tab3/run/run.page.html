@@ -10,24 +10,77 @@
   <ion-grid class="main-container">
     <h1>WSWED (Wann sind wir endlich da?) Run Club</h1>
     <h3>every last friday of the month</h3>
-    <h2>MEMBERS</h2>
+    <h2>Members</h2>
+
     <ion-row>
-      <ion-avatar class="CEO">
+      <div class="member-item">
+      <ion-avatar>
         <img alt="Silhouette of a person's head" src="assets/avatar/cover.png" />
       </ion-avatar>
+        <h4 class="member-name">Vicky</h4>
+        </div>
+
+      <div class="member-item">
       <ion-avatar>
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        <img alt="Silhouette of a person's head" src="assets/avatar/cover.png" />
       </ion-avatar>
+        <h4 class="member-name">Seli</h4>
+      </div>
+
+      <div class="member-item">
       <ion-avatar>
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        <img alt="Silhouette of a person's head" src="assets/avatar/cover.png" />
       </ion-avatar>
+        <h4 class="member-name">Flo</h4>
+      </div>
+
     </ion-row>
     <h2>Description</h2>
     <p>We aren't out here hunting Olympic medals. We’re a group of friends who realized that moving your legs is a lot easier when you’re laughing. Our philosophy is simple: No one gets left behind. Every route is meticulously planned to be accessible, scenic, and—most importantly—easy for everyone to crush. Whether we’re doing a casual 5k or a costume-clad themed run, the goal is always vibes over velocity.</p>
 
-
-    <ion-button>new event</ion-button>
   </ion-grid>
+  <ion-button id="open-modal" class="new-event-button">new event</ion-button>
+  <ion-modal trigger="open-modal" class="center-modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>New WSWED Event</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">Cancel</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
 
+      <ion-content class="ion-padding">
+        <div class="modal-body">
+          <ion-item lines="none">
+            <ion-label position="stacked">Select Date</ion-label>
+            <ion-datetime-button datetime="datetime"></ion-datetime-button>
+            <ion-modal [keepContentsMounted]="true">
+              <ng-template>
+                <ion-datetime id="datetime" presentation="date"></ion-datetime>
+              </ng-template>
+            </ion-modal>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-textarea
+              label="Note"
+              labelPlacement="stacked"
+              placeholder="Write a little note here..."
+              [autoGrow]="true"
+              rows="3">
+            </ion-textarea>
+          </ion-item>
+
+          <div class="button-wrapper">
+          <ion-button expand="block" class="publish-btn" (click)="closeModal()">
+            Publish
+          </ion-button>
+        </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 
 </ion-content>
